@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <parameter name="password" value="admin"/>
+    <parameter name="username" value="admin@yourstore.com"/>
+    <classes>
+      <class name="tests.RegressionTest">
+        <methods>
+          <include name="InitiateDriver"/>
+          <include name="GetResults"/>
+          <include name="startTest"/>
+          <include name="ValidateLoginTest" invocation-numbers="1 2"/>
+          <include name="Initialize"/>
+          <include name="TerminateDriver"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- tests.RegressionTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
